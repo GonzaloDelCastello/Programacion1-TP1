@@ -1,26 +1,21 @@
-import java.util.ArrayList;
 
-public class Estudiante {
 
-private String nombre;
-private String apellido;
-private int edad;
+public class Estudiante extends Persona{ //implements MiembroDeUniversidad {
+
 private Carrera carrera;
 private double promedio;
-private ArrayList<Materia> materias;
+private Materia[] materias;
 
 public Estudiante() {};
 
-public Estudiante(String nombre, String apellido, int edad, double promedio) {
-    this.nombre = nombre;
-    this.apellido = apellido;
-    setEdad(edad);
+public Estudiante(String nombre, String apellido, int edad, double promedio, String dni) {
+    super.nombre = nombre;
+    super.apellido = apellido;
+    super.edad = edad;
     this.promedio = promedio;
+    super.dni = dni;
 }
 
-public String correr(){
-    return this.nombre + " está corriendo";
-};
 
 public void agregarMateria(Materia materia) {
     if (this.materias == null) {
@@ -58,14 +53,7 @@ public void setNombre(String nombre) {
 public void setApellido(String apellido) {
     this.apellido = apellido;
 }
-public void setEdad(int edad) {
-    if (edad>120 || edad<16) {
-        System.out.println("Edad no valida");
-        return;         
-    } else {
-    this.edad = edad;
-    }
-}
+
 
 
 public double setPromedio(double promedio) {
@@ -76,5 +64,9 @@ public String toString() {
     return "Estudiante [nombre=" + this.nombre + ", apellido=" + this.apellido
      + ", edad=" + this.edad + ", carrera=" + this.carrera
      + ", promedio=" + this.promedio + "]";
+}
+@Override
+public String obtenerRol() {
+    return "Estudiante";
 }
 }

@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+
 
 public class Materia {
     
@@ -6,7 +6,8 @@ public class Materia {
     private int codigo;
     private int creditos;
     private Carrera carrera;
-    private ArrayList<Estudiante> estudiantes;
+    private Estudiante[] estudiantes;
+    private Profesor profesor;
     
     public Materia() {}
     
@@ -15,6 +16,7 @@ public class Materia {
         this.codigo = codigo;
         this.creditos = creditos;
         this.carrera = carrera;
+        this.estudiantes = new Estudiante[50];
     }
     public String getNombre() {
         return this.nombre;
@@ -44,14 +46,21 @@ public class Materia {
     public Carrera getCarrera() {
         return this.carrera;
     }
-    public ArrayList<Estudiante> getEstudiantes() {
+    public String getProfesor() {
+        return this.profesor.getNombre() + " " + this.profesor.getApellido();
+    }
+    public void setProfesor(Profesor profesor) {
+        this.profesor = profesor;
+    }
+    public Estudiante[] getEstudiantes() {
         return this.estudiantes;
     }
     public void agregarEstudiante(Estudiante estudiante) {
-        if (this.estudiantes == null) {
-            this.estudiantes = new ArrayList<>();
-        } else {
-            this.estudiantes.add(estudiante);
+        for (int i = 0; i < this.estudiantes.length; i++) {
+            if (this.estudiantes[i] == null) {
+                this.estudiantes[i] = estudiante;
+                break;
+            }
         }
     }
 
