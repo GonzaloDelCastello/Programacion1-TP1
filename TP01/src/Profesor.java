@@ -1,8 +1,9 @@
-public class Profesor extends Persona implements MiembroDeUniversidad {
+public class Profesor extends Persona { //implements MiembroDeUniversidad {
     
     private String especialidad;
     private int aniosExperiencia;
     private Materia[] materiaAsignadas;
+    private int cantidadMaterias;
 
     public Profesor(String nombre, String apellido, int edad, String especialidad, int aniosExperiencia) {
         super.nombre = nombre;
@@ -27,12 +28,8 @@ public class Profesor extends Persona implements MiembroDeUniversidad {
     }
 
     public void asignarMateria(Materia materia) {
-        for (int i = 0; i < this.materiaAsignadas.length; i++) {
-            if (this.materiaAsignadas[i] == null) {
-                this.materiaAsignadas[i] = materia;
-                break;
-            }
-        }
+        materiaAsignadas[cantidadMaterias] = materia;
+        cantidadMaterias++;
     }
     @Override
     public String toString() {

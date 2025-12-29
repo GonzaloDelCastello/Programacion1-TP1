@@ -15,9 +15,9 @@ public class App {
 
 
         //System.out.println(estudiante1.toString());
-    Estudiante estudiante2 = new Estudiante("Maria","Gomez",31,9.0);
-    Estudiante estudiante3 = new Estudiante("Luis","Lopez",19,8.0);
-    Estudiante estudiante4 = new Estudiante("Ana","Martinez",21,7.5);
+    Estudiante estudiante2 = new Estudiante("MAria","Gomez",22,"21441222");
+    Estudiante estudiante3 = new Estudiante("Luis","Lopez",19,"82465464");
+    Estudiante estudiante4 = new Estudiante("Ana","Martinez",21,"714546545");
         
     //Crea una universidad
     Universidad uNVIME = new Universidad("UNVIME","Av. Siempre Viva 123");

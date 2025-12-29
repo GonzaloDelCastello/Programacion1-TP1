@@ -6,6 +6,8 @@ public abstract class Persona implements MiembroDeUniversidad {
     protected int edad;
     protected String dni;
 
+    public Persona () {};
+
     public Persona(String nombre, String apellido, int edad,  String dni) {
         this.nombre = nombre;
         this.apellido = apellido;

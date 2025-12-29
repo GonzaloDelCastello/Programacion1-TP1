@@ -5,26 +5,26 @@ public class Estudiante extends Persona{ //implements MiembroDeUniversidad {
 private Carrera carrera;
 private double promedio;
 private Materia[] materias;
+private int cantidadMaterias;
 
 public Estudiante() {};
 
-public Estudiante(String nombre, String apellido, int edad, double promedio, String dni) {
+public Estudiante(String nombre, String apellido, int edad, String dni) {
     super.nombre = nombre;
     super.apellido = apellido;
     super.edad = edad;
-    this.promedio = promedio;
     super.dni = dni;
+    this.materias = new Materia[1000];
+    this.cantidadMaterias = 0;
 }
 
 
 public void agregarMateria(Materia materia) {
-    if (this.materias == null) {
-        this.materias = new ArrayList<>();
-    } else {
-        this.materias.add(materia);
-    }
+    materias[cantidadMaterias] = materia;
+    cantidadMaterias++;
 }
-public ArrayList<Materia> getMaterias() {
+
+public Materia[] getMaterias() {
     return this.materias;
 }
 // public double calcularPromedio() {
