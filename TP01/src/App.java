@@ -48,30 +48,30 @@ public class App {
     programacion1.agregarEstudiante(estudiante3);
     matematica.agregarEstudiante(estudiante1);
 
-    // System.out.println(uNVIME.getNombre() + " tiene las siguientes carreras:");
-    // for (Carrera carrera : uNVIME.getCarreras()) {
-    //     System.out.println("- " + carrera.getNombre() + " (" + carrera.getDuracion() + " años) con las siguientes materias:");
-    //     for (Materia materia : carrera.getMaterias()) {
-    //         System.out.println("  * " + materia.getNombre() + " (Código: " + materia.getCodigo() + ", Créditos: " + materia.getCreditos() + ") con los siguientes estudiantes:");
-    //         for (Estudiante estudiante : materia.getEstudiantes()) {
-    //             System.out.println("    - " + estudiante.getNombre() + " " + estudiante.getApellido() + " (Edad: " + estudiante.getEdad() + ", Promedio: " + estudiante.getPromedio() + ")");
-    //         }
-    //     }
-    // }
-    // Profesor profe1 = new Profesor("Carlos","Ramirez",45,"Programacion",20);
-    // System.out.println(profe1.getApellido());
+    System.out.println(uNVIME.getNombre() + " tiene las siguientes carreras:");
+    for (Carrera carrera : uNVIME.getCarreras()) {
+        System.out.println("- " + carrera.getNombre() + " (" + carrera.getDuracion() + " años) con las siguientes materias:");
+        for (Materia materia : carrera.getMaterias()) {
+            System.out.println("  * " + materia.getNombre() + " (Código: " + materia.getCodigo() + ", Créditos: " + materia.getCreditos() + ") con los siguientes estudiantes:");
+            for (Estudiante estudiante : materia.getEstudiantes()) {
+                System.out.println("    - " + estudiante.getNombre() + " " + estudiante.getApellido() + " (Edad: " + estudiante.getEdad() + ", Promedio: " + estudiante.getPromedio() + ")");
+            }
+        }
+    }
+    Profesor profe1 = new Profesor("Carlos","Ramirez",45,"Programacion",20);
+    System.out.println(profe1.getApellido());
     
     // Polimorfismo 
-    // Persona[] listPersonas =new Persona[6];
-    // listPersonas[0]=estudiante1;
-    // listPersonas[1]=estudiante2;
-    // listPersonas[2]=profesor1;
-    // listPersonas[3]=profesor2;
-    // for (int i = 0; i < listPersonas.length; i++) {
-    //     if (listPersonas[i] != null) {
-    //         System.out.println(listPersonas[i].toString());;
-    //     }
-    // }
+    Persona[] listPersonas =new Persona[6];
+    listPersonas[0]=estudiante1;
+    listPersonas[1]=estudiante2;
+    listPersonas[2]=profesor1;
+    listPersonas[3]=profesor2;
+    for (int i = 0; i < listPersonas.length; i++) {
+        if (listPersonas[i] != null) {
+            System.out.println(listPersonas[i].toString());;
+        }
+    }
 
     MiembroDeUniversidad[] miembros = new MiembroDeUniversidad[6];
     miembros[0] = estudiante1;

@@ -1,4 +1,4 @@
-public class Profesor extends Persona { //implements MiembroDeUniversidad {
+public class Profesor extends Persona {
     
     private String especialidad;
     private int aniosExperiencia;

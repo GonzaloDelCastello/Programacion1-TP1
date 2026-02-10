@@ -1,6 +1,6 @@
 
 
-public class Estudiante extends Persona{ //implements MiembroDeUniversidad {
+public class Estudiante extends Persona{ 
 
 private Carrera carrera;
 private double promedio;

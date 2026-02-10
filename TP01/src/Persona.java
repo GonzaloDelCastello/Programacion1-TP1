@@ -43,4 +43,9 @@ public abstract class Persona implements MiembroDeUniversidad {
     public String obtenerRol() {
         return "Persona";
     }
+
+    public boolean equals(Persona otraPersona) {
+        this.dni = otraPersona.dni;
+        return true;
+    }
 }
